@@ -1,4 +1,8 @@
 import Darwin
+var favorites = [Player]()
+func addFavorite(player: Player) {
+    favorites.append(player)
+}
 func searchID() {
     var foundPlayer: Player?
     print("Введите ID игрока:")
