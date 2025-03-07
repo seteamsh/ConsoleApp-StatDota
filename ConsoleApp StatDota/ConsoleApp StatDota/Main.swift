@@ -13,11 +13,13 @@ func searchID() {
         print(foundPlayer)
         
         print("1. Добавить в избранное")
-        print("2. Выход в главное меню")
+        print("2. Поиск игрока по ID")
+        print("3. Выход в главное меню")
         action = readLine() ?? ""
         switch action {
         case "1": addFavorite(player: foundPlayer!)
-        case "2": break
+        case "2": searchID()
+        case "3": break
         default: print("Ввели неверную команду, повторите снова")
         }
 }
