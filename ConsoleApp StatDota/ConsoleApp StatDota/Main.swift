@@ -1,18 +1,21 @@
 import Darwin
 var favorites = [Player]()
-
+func getDataFromUser(_ text: String) -> String {
+    print(text)
+    let action = readLine()
+    guard let action = action else { return "Неизвестная команда" }
+    return action
+}
 func searchID() {
     var foundPlayer: Player?
-    var action: String
-    print("Введите ID игрока:")
-    let id = readLine() ?? ""
+    let id = getDataFromUser("Введите ID игрока:")
     foundPlayer = findPlayerByID(Int(id) ?? 0)
     print(foundPlayer)
     
     print("1. Добавить в избранное")
     print("2. Поиск игрока по ID")
     print("3. Выход в главное меню")
-    action = readLine() ?? ""
+    let action = getDataFromUser("Выберите команду:")
     switch action {
     case "1": addFavorite(player: foundPlayer!)
     case "2": searchID()
@@ -56,7 +59,6 @@ func showFavorites() {
     }
 }
 
-
 @main
 struct Main {
     static func main() throws {
@@ -66,7 +68,7 @@ struct Main {
             print("1. Поиск игрока по ID")
             print("2. Сохраненные игроки")
             print("3. Выход")
-            let action = readLine() ?? ""
+            let action = getDataFromUser("Выберите команду:")
             switch action {
             case "1":
                 searchID()
