@@ -1,6 +1,7 @@
 class Application {
-    let searchPlayer = SearchPlayer()
-    let favorites = Favorites()
+    var searchPlayer = SearchPlayer()
+    var favorites = Favorites()
+    
     let exit = Exit()
     func run() {
         
@@ -12,7 +13,7 @@ class Application {
             print("3. Выход")
             let getAction = Actions.getDataFromUser("Введите номер действия:")
             switch getAction {
-            case "1": searchPlayer.run()
+            case "1": searchPlayer.searchID()
             case "2": favorites.showFavorites()
             default : exit.exit()
             }

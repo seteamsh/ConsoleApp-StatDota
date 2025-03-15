@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "Application.init():Application.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SearchPlayer.searchID():SearchPlayer.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Favorites.addFavorite(player:):Favorites.swift">
+      </ContextState>
+      <ContextState
+         contextName = "static Actions.getDataFromUser(_:):Actions.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Application.run():Application.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

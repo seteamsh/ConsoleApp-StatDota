@@ -1,10 +1,7 @@
 class SearchPlayer: Actions {
-    override func run() {
-        searchID()
-    }
     func searchID() {
         var foundPlayer: Player?
-        var favorites = Favorites()
+        let favorites = Favorites()
         let id = Actions.getDataFromUser("Введите ID игрока:")
         foundPlayer = findPlayerByID(Int(id) ?? 0)
         print(foundPlayer)

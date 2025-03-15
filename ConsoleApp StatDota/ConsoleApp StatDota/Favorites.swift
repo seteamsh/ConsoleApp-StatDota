@@ -1,5 +1,5 @@
 class Favorites: Actions {
-    var favorites = [Player]()
+    
     func addFavorite(player: Player) {
         for favorite in favorites {
             if favorite.id == player.id {

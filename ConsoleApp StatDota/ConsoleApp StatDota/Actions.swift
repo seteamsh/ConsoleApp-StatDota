@@ -5,7 +5,4 @@ class Actions {
         guard let action = action else { return "Неизвестная команда" }
         return action
     }
-    func run() {
-        
-    }
 }
