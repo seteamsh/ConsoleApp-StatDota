@@ -1,18 +1,19 @@
-class Favorites: Actions {
-    
-    func addFavorite(player: Player) {
-        for favorite in favorites {
+class AddFavorites: Actions {
+    func run(player: Player) {
+        for favorite in Application.favorites {
             if favorite.id == player.id {
                 print("Игрок с ID \(player.id) уже есть в избранном")
                 return
             }
         }
-        favorites.append(player)
+        Application.favorites.append(player)
         print("Игрок с ID \(player.id) добавлен в избранное")
     }
     
-    func showFavorites() {
-        for player in favorites {
+}
+class ShowFavorites {
+    func run() {
+        for player in Application.favorites {
             print("===================================")
             print("ID: \(player.id)")
             print("Name: \(player.name)")
